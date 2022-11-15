@@ -1,21 +1,34 @@
 
 // Factory Method
+/* Example1 */
+
+import {ConcreteCreator1, ConcreteCreator2, clientCode} from './FactoryPattern/example1'
+
+console.log('App: Launched with the ConcreteCreator1.');
+clientCode(new ConcreteCreator1());
+console.log('');
+
+console.log('App: Launched with the ConcreteCreator2.');
+clientCode(new ConcreteCreator2());
+
+
+/* Example2 */
 /*MackOSButton and WindowOSButton implements Button interface similarly MackOSCheckbox and WindowOSCheckbox implements Checkbox interface,
 WindowsFactory and MacOSFactory implements GUIFactory interface help to create object of win and mac Checkbox and win and mac Button classes
 */
-import { Demo, Application } from "../pattern/FactoryMethod/product-creator"
+import { Demo, Application } from "./FactoryPattern/product-creator"
 const app: Application = Demo.configureApplication("win");
 app.paint();
 
 
-
+/* Example3 */
 /* OS is a interface 
     Android Implements OS
     IOS Implements OS
     Windows implements OS
     OperatingSystemFactory is a class return the instance of OS according to its value.
     */
-import { OperatingSystemFactory } from '../pattern/FactoryMethod/os-android-windows-ios';
+import { OperatingSystemFactory } from './FactoryPattern/os-android-windows-ios';
 // Android os implements OS interface
 const osObj1 = new OperatingSystemFactory();
 const obj1 = osObj1.getInstance("Open");
@@ -34,7 +47,7 @@ obj3.spec();
 
 
 
-import {Ship, Truck} from '../pattern/FactoryMethod/ship-truck'
+import {Ship, Truck} from './FactoryPattern/ship-truck'
 const truckObj=new Truck(214558258, "Jhon Wick");
 const shipObj=new Ship(258255584, "Scarlett Johansson");
 truckObj.driver();
