@@ -32,7 +32,7 @@
             }
             showPrice():void{
                 const comp:Component[]=this.list.getList();
-                comp.forEach((cmp)=> console.log("component are: ", cmp.showPrice()));
+                comp.forEach((cmp)=> cmp ).map((val)=>console.log("component are: ", val.showPrice()));
               
             }
         }
