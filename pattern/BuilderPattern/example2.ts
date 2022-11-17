@@ -75,6 +75,7 @@ class CarManualBuilder implements Builder {
 
 // Cars
 class Car {
+    [x: string]: any;
     private readonly types: Type;
     private readonly seats: number;
     private readonly engine: Engine;
