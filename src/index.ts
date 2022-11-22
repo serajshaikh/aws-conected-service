@@ -12,7 +12,7 @@ dotenv.config();
 // reading file from UploadMe folder and converting into Object
 const newpath = path.join(__dirname, '../src/uploadMe/sampleDemo.json');
 const BODY = fs.readFileSync(newpath).toString();
-const props = JSON.parse(BODY.toString());
+const props = JSON.parse(BODY);
 const email: string = props.Email;
 const subject: string = props.subject;
 const status: number = props.status;
